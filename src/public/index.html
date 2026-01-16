@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marcação de Refeição</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .hidden {
+      display: none;
+    }
+    .ok {
+      color: green;
+      margin-top: 10px;
+    }
+    .err {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>🍽️ Marcação de Refeição</h2>
+
+  <div id="login">
+    <input id="matricula" placeholder="Digite sua matrícula" />
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div id="menu" class="hidden">
+    <p>Olá! Escolha a refeição:</p>
+    <button onclick="marcar('cafe')">☕ Café</button>
+    <button onclick="marcar('almoco')">🍛 Almoço</button>
+    <button onclick="marcar('jantar')">🌙 Jantar</button>
+  </div>
+
+  <div id="msg"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
