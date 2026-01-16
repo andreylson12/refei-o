@@ -4,3 +4,4 @@ const { port } = require("./config/env");
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
+
